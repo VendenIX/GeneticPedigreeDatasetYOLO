@@ -39,7 +39,7 @@ The dataset contains the following features to make it suitable for robust train
 - **Synthetic Noise**: Random noise is applied to each image to simulate varying levels of image quality and help improve model robustness.
 - **YOLO Format**: Each symbol is labeled with bounding boxes in YOLO format, making it compatible with YOLOv5 and YOLOv8 models.
 
-## Project Structure
+## Dataset Structure
 
 ```plaintext
 .
@@ -51,3 +51,29 @@ The dataset contains the following features to make it suitable for robust train
     ├── train/
     ├── val/
     └── test/
+```
+
+# TO DO : 
+
+- Fix the bug of long squares tubes 
+- Fix the creation of arrows (incorrect bounding boxes)
+- Add drawings forms some ideas : 
+
+1. **Matplotlib + Path Effects** :
+   - Matplotlib propose des effets de chemin (**Path Effects**) qui peuvent être utilisés pour donner un aspect dessiné à la main. En utilisant des lignes irrégulières ou en ajoutant du bruit, on peux obtenir des formes avec un style plus naonrel.
+   - On peux ajouter des effets de tremblement aux lignes pour les rendre moins précises, et ainsi donner l'impression qu'elles ont été tracées à main levée.
+
+2. **Pillow + Bezier Curves** :
+   - Avec **Pillow** et l’ajout de courbes de Bézier, on peux dessiner des formes légèrement irrégulières, en variant légèrement les coordonnées des points. En ajoutant du bruit ou des distorsions, les lignes se rapprochent d’un style manuscrit.
+   - Il est aussi possible d’appliquer des filtres pour accenoner les contours ou faire un léger flou pour un effet encore plus naonrel.
+
+3. **Manim** :
+   - **Manim** est une bibliothèque de création d’animations mathématiques, mais elle est aussi capable de créer des formes stylisées. En utilisant des paramètres spécifiques (comme les trajectoires d’animations), on peux obtenir des dessins qui semblent avoir été tracés à main levée.
+   
+4. **Handright** :
+   - Pour générer directement du texte manuscrit, la bibliothèque **Handright** est aussi utile, car elle applique des distorsions et variations aléatoires sur les lettres et les formes.
+
+5. **Custom Perlin Noise** :
+   - Pour une approche plus avancée, l’application de bruit de Perlin sur les contours des formes peut donner des lignes sinueuses et irrégulières. En modifiant les positions des points d’une forme géométrique, on peux obtenir cet effet manuscrit.
+
+6. **Utiliser le dataset** https://github.com/frobertpixto/hand-drawn-shapes-dataset/ 
