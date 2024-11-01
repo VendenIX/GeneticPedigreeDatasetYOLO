@@ -56,7 +56,6 @@ The dataset contains the following features to make it suitable for robust train
 # TO DO : 
 
 - Fix the bug of long squares tubes 
-- Fix the creation of arrows (incorrect bounding boxes)
 - Add drawings forms some ideas : 
 
 1. **Matplotlib + Path Effects** :
